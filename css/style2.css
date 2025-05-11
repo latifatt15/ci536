@@ -1,0 +1,155 @@
+/* General reset and font setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #75bdda;
+    color: #000;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+ padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: red;
+}
+
+img	{ 
+    max-width: 80%; 
+}
+img.logo {
+   width:300px ;
+    height: 100px ; 
+
+}
+
+/* Container layout */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Welcome Message */
+main h1 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+/* Info Card */
+.info-card {
+    background: #fff;
+    border-left: 6px solid #75bdda;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
+}
+
+.info-card h2 {
+    font-size: 1.75rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.info-card p,
+.info-card li {
+    color: #333;
+    font-size: 1rem;
+}
+
+.info-card ul {
+    margin-top: 1rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.info-card li::before {
+    content: '•';
+    color: #75bdda;
+    position: absolute;
+    left: 0;
+}
+
+/* Search Bar Styles */
+.search-bar {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 2rem 0;
+}
+
+.search-input {
+width: 60%;
+padding: 0.7rem 1rem;
+border: 2px solid #ccc;
+border-radius: 8px 0 0 8px;
+font-size: 1rem;
+outline: none;
+transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+border-color: var(--primary-color);
+}
+
+.search-button {
+padding: 0.7rem 1rem;
+background-color: var(--primary-color);
+border: none;
+border-radius: 0 8px 8px 0;
+color: white;
+font-size: 1.1rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+background-color: #004199;
+}
+
+/* Footer */
+footer {
+    background-color: #75bdda;
+    color: #000;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
