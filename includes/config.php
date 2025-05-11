@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";  
-$password = "root";      
-$database = "marketplace2";  
+$username = "bld27_market_user";  
+$password = "b?i0eE*oa)t]";      
+$database = "bld27_marketplace";  
 
 $conn = new mysqli($servername, $username, $password, $database);
 
