@@ -31,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (password_verify($password, $hashed_password)) {
                 // Save user ID in the session and redirect to homepage
                 $_SESSION['user_id'] = $user_id;
+
+            
                 header("Location: index.php");
                 exit();
             } else {
@@ -49,6 +51,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <?php include 'includes/header.php'; ?>
 
+<?php
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    echo "<p style='color: red; font-weight: bold;'>You are already logged in!</p>";
+    exit(); 
+}
+?>
+
+<html>
 <main class="container">
     <h1>Log In</h1>
 
@@ -89,5 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </p>
     </form>
 </main>
+</html>
 
 <?php include 'includes/footer.php'; ?>
